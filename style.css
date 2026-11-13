@@ -1,0 +1,21 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{height:100vh;overflow:hidden;background:radial-gradient(ellipse at bottom,#1a0a1f,#05050f 70%);font-family:Georgia,serif;color:#fff}
+canvas{position:fixed;inset:0}
+#portada{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;background:radial-gradient(ellipse at center,#2a0a18,#05050f);transition:opacity 1.5s}
+#portada.off{opacity:0;pointer-events:none}
+#portada h1{font-size:clamp(28px,6vw,56px);color:#ff4d5e;text-shadow:0 0 20px #ff1f3d}
+#portada p{margin:20px 0 35px;font-size:clamp(16px,3vw,22px);max-width:500px;color:#ffd6da}
+button{padding:14px 34px;font-size:18px;border:2px solid #ff4d5e;background:transparent;color:#fff;border-radius:40px;cursor:pointer;transition:.3s}
+button:hover{background:#ff4d5e;box-shadow:0 0 25px #ff4d5e}
+#escena{position:fixed;inset:0;opacity:0;transition:opacity 2s}
+#escena.on{opacity:1}
+#luna{position:absolute;top:7vh;left:8vw;width:clamp(50px,9vw,90px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fffbe8,#e8dfb8);box-shadow:0 0 50px 15px rgba(255,248,210,.35)}
+#frase{position:absolute;top:16vh;width:100%;text-align:center;padding:0 20px;letter-spacing:4px;font-size:clamp(12px,2.4vw,20px);color:#ff8f9c;text-transform:uppercase;text-shadow:0 0 10px #ff1f3d;opacity:0}
+#escena.on #frase{animation:aparece 4s 1.5s forwards}
+@keyframes aparece{to{opacity:1}}
+#jardin{position:absolute;bottom:3vh;left:10%;right:10%;height:75vh;display:flex;justify-content:space-around;align-items:flex-end}
+.tulip{transform-origin:50% 100%;animation:sway 4s ease-in-out infinite alternate;filter:drop-shadow(0 0 12px rgba(255,30,60,.7))}
+@keyframes sway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+#pasto{position:absolute;bottom:0;left:0;right:0;height:45vh;pointer-events:none}
+.hoja{position:absolute;bottom:-2px;transform-origin:50% 100%;animation:sway 3s ease-in-out infinite alternate;filter:drop-shadow(0 0 4px rgba(40,220,160,.35))}
+#musica{position:absolute;top:16px;right:16px;padding:8px 14px;font-size:14px}

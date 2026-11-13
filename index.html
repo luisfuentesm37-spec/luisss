@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tulipanes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="portada">
+  <h1>  Para ti🌷</h1>
+  <p>VALERIA</p>
+  <button id="abrir">Abrir sorpresa</button>
+</div>
+
+<div id="escena">
+  <div id="luna"></div>
+  <div id="frase">"Soñé contigo antes de conocerte, y
+     cuando finalmente lo hice, fue como si te hubiera conocido toda mi vida."</div>
+  <div id="jardin"></div>
+  <div id="pasto"></div>
+  <button id="musica">⏸ Música</button>
+</div>
+
+<audio id="audio" src="./Sebastián Yatra - No hay nadie más LETRA.mp3" loop></audio>
+
+<svg width="0" height="0">
+  <defs>
+    <symbol id="tulipan" viewBox="0 0 100 200">
+      <path d="M50 200 C48 150 52 110 50 74" stroke="#2fa84f" stroke-width="4" fill="none"/>
+      <path d="M50 190 C20 170 12 130 22 110 C40 125 48 160 50 190Z" fill="#1f8a3c"/>
+      <path d="M50 170 C80 150 88 115 78 95 C60 110 52 140 50 170Z" fill="#2fa84f"/>
+      <path d="M50 74 C26 74 24 44 30 30 Q36 22 43 32 C48 44 50 56 50 74Z" fill="#b3001b"/>
+      <path d="M50 74 C74 74 76 44 70 30 Q64 22 57 32 C52 44 50 56 50 74Z" fill="#b3001b"/>
+      <path d="M50 78 C32 72 34 42 42 28 Q50 18 58 28 C66 42 68 72 50 78Z" fill="#ff2a44"/>
+    </symbol>
+  </defs>
+</svg>
+
+<script src="script.js"></script>
+</body>
+</html>
