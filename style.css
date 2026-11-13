@@ -16,6 +16,14 @@ button:hover{background:#ff4d5e;box-shadow:0 0 25px #ff4d5e}
 #jardin{position:absolute;bottom:3vh;left:10%;right:10%;height:75vh;display:flex;justify-content:space-around;align-items:flex-end}
 .tulip{transform-origin:50% 100%;animation:sway 4s ease-in-out infinite alternate;filter:drop-shadow(0 0 12px rgba(255,30,60,.7))}
 @keyframes sway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
-#pasto{position:absolute;bottom:0;left:0;right:0;height:45vh;pointer-events:none}
+#pasto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25vh;
+    pointer-events: none;
+    overflow: hidden;
+}
 .hoja{position:absolute;bottom:-2px;transform-origin:50% 100%;animation:sway 3s ease-in-out infinite alternate;filter:drop-shadow(0 0 4px rgba(40,220,160,.35))}
 #musica{position:absolute;top:16px;right:16px;padding:8px 14px;font-size:14px}
