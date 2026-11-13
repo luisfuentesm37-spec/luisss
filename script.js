@@ -9,16 +9,45 @@ const jardin=document.getElementById('jardin');
   jardin.innerHTML+='<svg class="tulip" style="height:min('+t[0]+'vh,'+t[0]*.9+'vw);width:min('+t[0]/2+'vh,'+t[0]*.45+'vw);animation-delay:'+t[1]+'s" viewBox="0 0 100 200"><use href="#tulipan"/></svg>';
 });
 
-// hierba: más densa a los lados
-const pasto=document.getElementById('pasto');
-for(let i=0;i<120;i++){
-  const r=Math.random(),lado=r<.4?Math.random()*28:r<.8?72+Math.random()*28:Math.random()*100;
-  const borde=lado<28||lado>72,h=borde?14+Math.random()*30:6+Math.random()*10;
-  const d=document.createElement('div');
-  d.className='hoja';
-  d.innerHTML='<svg viewBox="0 0 20 100" preserveAspectRatio="none" width="100%" height="100%"><path d="M0 100 Q3 45 '+(Math.random()<.5?2:16)+' 0 Q14 50 20 100Z" fill="hsl('+(125+Math.random()*50)+',70%,'+(22+Math.random()*20)+'%)"/></svg>';
-  d.style.cssText='left:'+lado+'%;height:'+h+'vh;width:'+(14+Math.random()*14)+'px;animation-delay:'+(-Math.random()*3)+'s';
-  pasto.appendChild(d);
+// Hierba mejorada: baja y natural
+const pasto = document.getElementById('pasto');
+
+for(let i = 0; i < 150; i++){
+
+    const lado = Math.random() * 100;
+
+    // Hierba más alta en los extremos
+    const borde = lado < 20 || lado > 80;
+
+    const h = borde
+        ? 5 + Math.random() * 12
+        : 3 + Math.random() * 7;
+
+    const d = document.createElement('div');
+
+    d.className = 'hoja';
+
+    d.innerHTML = `
+        <svg viewBox="0 0 20 100"
+             preserveAspectRatio="none"
+             width="100%"
+             height="100%">
+
+            <path
+                d="M0 100 Q3 45 10 0 Q14 50 20 100Z"
+                fill="hsl(${120 + Math.random()*45},65%,${22 + Math.random()*20}%)"
+            />
+        </svg>
+    `;
+
+    d.style.cssText = `
+        left: ${lado}%;
+        height: ${h}vh;
+        width: ${5 + Math.random()*9}px;
+        animation-delay: ${-Math.random()*3}s;
+    `;
+
+    pasto.appendChild(d);
 }
 
 // estrellas, fugaces, partículas y pétalos
